@@ -13,32 +13,36 @@ class StationDataViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let userInitiated = DispatchQueue.global(qos: .userInitiated)
-    let dataManager = DataManager()
-
+    
     let searchController = UISearchController(searchResultsController: nil)
+    let dataManager = DataManager()
+    
+    var stationIndex = 0
 
     var stationData = [StationData]()
     var filteredData = [StationData]()
-    var station: Station?
-    var stationName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         initSearchController()
-        navigationItem.title = stationName
-        
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        userInitiated.async {
-            self.loadData()
+        navigationItem.title = Constant.stations[stationIndex].name
+
+        if Constant.stations[stationIndex].data.isEmpty {
+            UIApplication.shared.isNetworkActivityIndicatorVisible = true
+            userInitiated.async {
+                self.loadData()
+            }
+        } else {
+             stationData = Constant.stations[stationIndex].data
         }
     }
     
     func loadData() {
-        guard let currentStation = station else { return }
-        dataManager.readData(forStation: currentStation.internalTitle, complition: { (station) in
+        dataManager.readData(forStation: Constant.stations[stationIndex].internalTitle, complition: { (station) in
             DispatchQueue.main.async {
                 self.stationData = station
+                Constant.stations[self.stationIndex].data = station
                 self.tableView.reloadData()
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
             }
@@ -66,7 +70,7 @@ class StationDataViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let detailVC = segue.destination as! DataDetailViewController
         if let indexPatch = tableView.indexPathForSelectedRow?.row {
-            detailVC.stationName = stationName
+            detailVC.stationName = Constant.stations[stationIndex].name
             if isFiltering() {
                 detailVC.dataArray = filteredData[indexPatch]
             } else {
