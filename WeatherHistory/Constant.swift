@@ -48,13 +48,5 @@ struct Constant {
                            Station(name: "Ballypatrick Forest", internalTitle: "ballypatrick", data: [StationData]()),
                            Station(name: "Armagh", data: [StationData]()),
                            Station(name: "Aberporth", data: [StationData]())]
-    
-    static func saveData(toStation savedStation: Station) {        
-        for index in 0..<stations.count {
-            if stations[index].name == savedStation.name {
-                Constant.stations[index].data = savedStation.data
-            }
-        }
-    }
 }
 

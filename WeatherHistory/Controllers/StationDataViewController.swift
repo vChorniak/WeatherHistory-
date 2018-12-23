@@ -18,7 +18,6 @@ class StationDataViewController: UIViewController {
     let dataManager = DataManager()
     
     var stationIndex = 0
-
     var stationData = [StationData]()
     var filteredData = [StationData]()
     
@@ -55,6 +54,7 @@ class StationDataViewController: UIViewController {
     }
     
     func initSearchController() {
+        filteredData = Constant.stations[stationIndex].data
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Year"
@@ -99,6 +99,10 @@ class StationDataViewController: UIViewController {
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
+    }
+    
+    deinit {
+        self.searchController.view.removeFromSuperview()
     }
 }
 
