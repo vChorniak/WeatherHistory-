@@ -7,14 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CECFCBA521CAC8C200B9BE7A /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECFCBA421CAC8C200B9BE7A /* Constant.swift */; };
+		CECFCBA821CAF38200B9BE7A /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECFCBA721CAF38200B9BE7A /* Station.swift */; };
+		CECFCBAA21CAF39100B9BE7A /* StationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECFCBA921CAF39100B9BE7A /* StationData.swift */; };
 		CEE14F1B21C94DC1009177DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE14F1A21C94DC1009177DF /* AppDelegate.swift */; };
 		CEE14F1D21C94DC1009177DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE14F1C21C94DC1009177DF /* ViewController.swift */; };
 		CEE14F2021C94DC1009177DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE14F1E21C94DC1009177DF /* Main.storyboard */; };
 		CEE14F2221C94DC7009177DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE14F2121C94DC7009177DF /* Assets.xcassets */; };
 		CEE14F2521C94DC7009177DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE14F2321C94DC7009177DF /* LaunchScreen.storyboard */; };
+		CEE14F2D21C95AD8009177DF /* StationDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE14F2C21C95AD8009177DF /* StationDataViewController.swift */; };
+		CEE14F2F21C96E22009177DF /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE14F2E21C96E22009177DF /* DateFormat.swift */; };
+		CEE14F3321C97E46009177DF /* DataDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE14F3221C97E46009177DF /* DataDetailViewController.swift */; };
+		CEE14F3521C98FD9009177DF /* DataManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE14F3421C98FD9009177DF /* DataManger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CECFCBA421CAC8C200B9BE7A /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		CECFCBA721CAF38200B9BE7A /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		CECFCBA921CAF39100B9BE7A /* StationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationData.swift; sourceTree = "<group>"; };
 		CEE14F1721C94DC1009177DF /* WeatherHistory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherHistory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE14F1A21C94DC1009177DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEE14F1C21C94DC1009177DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +32,10 @@
 		CEE14F2121C94DC7009177DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEE14F2421C94DC7009177DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEE14F2621C94DC7009177DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEE14F2C21C95AD8009177DF /* StationDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDataViewController.swift; sourceTree = "<group>"; };
+		CEE14F2E21C96E22009177DF /* DateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
+		CEE14F3221C97E46009177DF /* DataDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDetailViewController.swift; sourceTree = "<group>"; };
+		CEE14F3421C98FD9009177DF /* DataManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +49,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CECFCBA621CAF36E00B9BE7A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CECFCBA721CAF38200B9BE7A /* Station.swift */,
+				CECFCBA921CAF39100B9BE7A /* StationData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		CEE14F0E21C94DC1009177DF = {
 			isa = PBXGroup;
 			children = (
@@ -55,13 +78,27 @@
 			isa = PBXGroup;
 			children = (
 				CEE14F1A21C94DC1009177DF /* AppDelegate.swift */,
-				CEE14F1C21C94DC1009177DF /* ViewController.swift */,
+				CEE14F3421C98FD9009177DF /* DataManger.swift */,
+				CEE14F2E21C96E22009177DF /* DateFormat.swift */,
+				CECFCBA421CAC8C200B9BE7A /* Constant.swift */,
+				CEE14F3621C99864009177DF /* Controllers */,
+				CECFCBA621CAF36E00B9BE7A /* Models */,
 				CEE14F1E21C94DC1009177DF /* Main.storyboard */,
 				CEE14F2121C94DC7009177DF /* Assets.xcassets */,
 				CEE14F2321C94DC7009177DF /* LaunchScreen.storyboard */,
 				CEE14F2621C94DC7009177DF /* Info.plist */,
 			);
 			path = WeatherHistory;
+			sourceTree = "<group>";
+		};
+		CEE14F3621C99864009177DF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CEE14F1C21C94DC1009177DF /* ViewController.swift */,
+				CEE14F2C21C95AD8009177DF /* StationDataViewController.swift */,
+				CEE14F3221C97E46009177DF /* DataDetailViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +172,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CECFCBA521CAC8C200B9BE7A /* Constant.swift in Sources */,
+				CEE14F3321C97E46009177DF /* DataDetailViewController.swift in Sources */,
+				CECFCBA821CAF38200B9BE7A /* Station.swift in Sources */,
+				CEE14F2D21C95AD8009177DF /* StationDataViewController.swift in Sources */,
+				CECFCBAA21CAF39100B9BE7A /* StationData.swift in Sources */,
 				CEE14F1D21C94DC1009177DF /* ViewController.swift in Sources */,
+				CEE14F2F21C96E22009177DF /* DateFormat.swift in Sources */,
 				CEE14F1B21C94DC1009177DF /* AppDelegate.swift in Sources */,
+				CEE14F3521C98FD9009177DF /* DataManger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,15 +327,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2BGX5BR6RB;
 				INFOPLIST_FILE = WeatherHistory/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.chorniak.WeatherHistory;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chorniak.WeathersHistory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -300,15 +346,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2BGX5BR6RB;
 				INFOPLIST_FILE = WeatherHistory/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.chorniak.WeatherHistory;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chorniak.WeathersHistory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
